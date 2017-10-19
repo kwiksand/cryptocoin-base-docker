@@ -1,9 +1,9 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 ENV GOSU_VERSION=1.10
 
 RUN apt-get update && \
-    apt-get install -y ntp git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev autoconf automake pkg-config unzip curl wget make bsdmainutils autotools-dev libtool libevent-dev libgmp-dev && \
+    apt-get install -y ntp git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev autoconf automake pkg-config unzip curl wget make bsdmainutils autotools-dev libtool libevent-dev libgmp-dev jq && \
     apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:bitcoin/bitcoin && \
     apt-get update && \
