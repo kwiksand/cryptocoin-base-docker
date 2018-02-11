@@ -11,3 +11,13 @@ We install:
 - Install build dependencies required for building the cryptocoin libraries (libssl, libdb4.8, make, git, etc)
 - Install miniupnp
 - Install GoSU for docker entrypoint support (as the container runs)
+
+Release Notes:
+- 0.01 (17/08/2017)
+  - initial build(s)
+- 0.1 (19/09/2017)
+  - moved cash from down stream
+  - updated ubuntu base
+- 0.2 (23/10/2017)
+- 0.3 (11/02/2018)
+  - updated ubuntu base
