@@ -21,3 +21,7 @@ Release Notes:
 - 0.2 (23/10/2017)
 - 0.3 (11/02/2018)
   - updated ubuntu base
+- 0.4 (17/11/2018)
+  - updated ubuntu base
+  - updated miniupnpnc
+  - updated GoSU

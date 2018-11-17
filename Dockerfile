@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
-ENV GOSU_VERSION=1.10
+ENV GOSU_VERSION=1.11
+ENV MINIUPNPNC_VERSION=2.1
 
 RUN apt-get update && \
     apt-get install -y ntp git build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev libqrencode-dev autoconf automake pkg-config unzip curl wget make bsdmainutils autotools-dev libtool libevent-dev libgmp-dev jq && \
@@ -25,5 +26,5 @@ RUN cd /root && gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys
     && chmod +x /usr/local/bin/gosu
 
 # Install miniupnp
-RUN cd /root && wget http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.tar.gz && tar -zxf download.php\?file\=miniupnpc-1.8.tar.gz && cd miniupnpc-1.8/ && \
-    make && make install && cd .. && rm -rf miniupnpc-1.8 download.php\?file\=miniupnpc-1.8.tar.gz
+RUN cd /root && wget http://miniupnp.free.fr/files/download.php?file=miniupnpc-${MINIUPNPNC_VERSION}.tar.gz && tar -zxf download.php\?file\=miniupnpc-${MINIUPNPNC_VERSION}.tar.gz && cd miniupnpc-${MINIUPNPNC_VERSION}/ && \
+    make && make install && cd .. && rm -rf miniupnpc-${MINIUPNPNC_VERSION} download.php\?file\=miniupnpc-${MINIUPNPNC_VERSION}.tar.gz
