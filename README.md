@@ -25,3 +25,5 @@ Release Notes:
   - updated ubuntu base
   - updated miniupnpnc
   - updated GoSU
+- 0.5 (30/03/2019)
+  - updating base
